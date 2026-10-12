@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: comment-to-dm
+    runtime: docker
+    healthCheckPath: /health
+    envVars:
+      # Supabase connection string (Supabase dashboard -> Project Settings -> Database
+      # -> Connection string -> Direct, or Session pooler if using IPv6-less hosts).
+      - key: DATABASE_URL
+        sync: false
+      - key: FACEBOOK_APP_SECRET
+        sync: false
+      - key: WEBHOOK_VERIFY_TOKEN
+        sync: false
+      - key: DASHBOARD_PASSWORD
+        sync: false
+      - key: APP_ORIGIN
+        sync: false
+      - key: INSTAGRAM_ACCESS_TOKEN
+        sync: false
+      - key: INSTAGRAM_BUSINESS_ACCOUNT_ID
+        sync: false

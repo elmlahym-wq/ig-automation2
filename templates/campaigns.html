@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Campaigns{% endblock %}
+{% block content %}
+<div class="row"><h1>Campaigns</h1><button id="new-btn" class="btn primary">New campaign</button></div>
+<div id="list"></div>
+
+<dialog id="dlg" aria-labelledby="dlg-title">
+  <form id="campaign-form">
+    <h2 id="dlg-title">New campaign</h2>
+    <input type="hidden" name="id">
+    <label>Campaign name <input name="name" placeholder="Summer guide giveaway"></label>
+    <label>Post ID <input name="post_id" required placeholder="17912345678901234"></label>
+    <div id="preview" class="preview" hidden></div>
+    <label>Trigger keywords <input name="keywords" required placeholder="guide, link, info">
+      <small class="muted">Comma-separated. Matches anywhere in a comment, ignoring case.</small></label>
+    <label>Public comment reply <textarea name="comment_reply" rows="3" required>Thanks! Check your DMs 📩</textarea></label>
+    <label>DM message <textarea name="dm_message" rows="4" required>Hey {username}, here's the link you asked for: https://example.com</textarea>
+      <small class="muted">Use {username} to insert the commenter's handle.</small></label>
+    <label class="check"><input type="checkbox" name="active" checked> Active</label>
+    <div class="row end">
+      <button type="button" class="btn" id="cancel">Cancel</button>
+      <button class="btn primary">Save campaign</button>
+    </div>
+  </form>
+</dialog>
+{% endblock %}

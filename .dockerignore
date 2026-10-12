@@ -1,0 +1,16 @@
+.env
+.env.*
+*SECRETS*
+*.pem
+*.key
+*.db
+*.sqlite*
+*.log
+.git
+.venv
+venv
+__pycache__
+*.py[cod]
+.pytest_cache
+tests
+docs

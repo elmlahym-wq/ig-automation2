@@ -1,0 +1,10 @@
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+healthcheckPath = "/health"
+healthcheckTimeout = 30
+restartPolicyType = "ON_FAILURE"
+# DATABASE_URL = Supabase Postgres connection string (Project Settings -> Database).
+# No volume needed: the database lives in Supabase.

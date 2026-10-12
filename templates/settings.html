@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Settings{% endblock %}
+{% block content %}
+<h1>Instagram connection</h1>
+<p class="muted">Tokens are kept on the server and never returned by the API. Environment credentials override saved settings.</p>
+<form id="settings-form" class="panel">
+  <label>Access token
+    <input type="password" name="access_token" autocomplete="off" placeholder="Paste a token (environment configuration preferred)">
+    <small id="token-hint" class="muted"></small>
+  </label>
+  <label>Facebook Page ID <input name="page_id" autocomplete="off"></label>
+  <label>Instagram business account ID <input name="ig_account_id" autocomplete="off"></label>
+  <button class="btn primary">Save settings</button>
+</form>
+{% endblock %}

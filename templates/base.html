@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{% endblock %} · Comment-to-DM</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body data-page="{{ page }}">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="top">
+    <strong class="brand">Comment→DM</strong>
+    <nav>
+      <a href="/dashboard/campaigns" class="{{ 'on' if page == 'campaigns' }}">Campaigns</a>
+      <a href="/dashboard/settings" class="{{ 'on' if page == 'settings' }}">Settings</a>
+    </nav>
+  </header>
+  <main id="main">{% block content %}{% endblock %}</main>
+  <div id="toast" role="status"></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
